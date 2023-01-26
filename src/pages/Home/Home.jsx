@@ -7,17 +7,12 @@ function Home() {
    const [catalog, setCatalog] = useState([]);
 
    useEffect(() => {
-		getAllCategories()
-		.then(data => setCatalog(data.categories))
-	}, []);
+      getAllCategories().then((data) => setCatalog(data.categories));
+   }, []);
 
-   return <>
-		{
-			catalog.length 
-			? (<CategoryList catalog={catalog} />)
-			: <Preloader />
-		}
-	</>;
+   return (
+      <>{catalog.length ? <CategoryList catalog={catalog} /> : <Preloader />}</>
+   );
 }
 
 export default Home;
