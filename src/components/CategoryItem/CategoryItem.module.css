@@ -1,0 +1,16 @@
+.card{
+	display: grid;
+	padding: 5px;
+	grid-template-rows: auto 1fr auto ;
+}
+
+.title{
+	justify-self: center;
+	align-self: center;
+}
+
+.bottom{
+	width: 100%;
+	justify-items: center;
+	align-self: center;
+}
