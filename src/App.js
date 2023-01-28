@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
+import GetMealInfo from './components/GetMealInfo/GetMealInfo';
 import Layout from './Layout/Layout';
 
 import About from './pages/About/About';
+import Category from './pages/Category/Category';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
@@ -14,8 +16,11 @@ function App() {
                <Route index element={<Home />} />
                <Route path='about' element={<About />} />
                <Route path='contact' element={<Contact />} />
+               <Route path='category/:name' element={<Category />} />
+               <Route path='meal/:id' element={<GetMealInfo />} />
                <Route path='*' element={<NotFound />} />
             </Route>
+            f
          </Routes>
       </>
    );
