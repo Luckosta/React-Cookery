@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMealById } from '../../api';
-import MealInfo from '../MealInfo/MealInfo';
+import Recipe from '../Recipe/Recipe';
 import Preloader from '../Preloader/Preloader';
 
 function GetMealInfo() {
@@ -14,9 +14,7 @@ function GetMealInfo() {
    return (
       <div>
          {mealData !== null ? (
-            mealData.map((mealInfo) => (
-               <MealInfo key={mealInfo.idMeal} {...mealInfo} />
-            ))
+            mealData.map((recipe) => <Recipe key={recipe.idMeal} {...recipe} />)
          ) : (
             <Preloader />
          )}
