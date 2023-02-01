@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Cookery/static/css/main.0c012a3c.css",
+    "main.js": "/React-Cookery/static/js/main.303a100f.js",
+    "index.html": "/React-Cookery/index.html",
+    "main.0c012a3c.css.map": "/React-Cookery/static/css/main.0c012a3c.css.map",
+    "main.303a100f.js.map": "/React-Cookery/static/js/main.303a100f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c012a3c.css",
+    "static/js/main.303a100f.js"
+  ]
+}
