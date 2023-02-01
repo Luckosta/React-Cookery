@@ -5,18 +5,10 @@ function Header() {
    return (
       <nav className='blue'>
          <div className='nav-wrapper '>
-            <a
-               href='https://github.com/Luckosta/React-Cookery'
-               className={classNames(styles.logo, 'brand-logo ')}
-               target='_blank'
-               rel='noreferrer'
-            >
+            <Link to='/' className={classNames(styles.logo, 'brand-logo ')}>
                React-Cookery
-            </a>
+            </Link>
             <ul id='nav-mobile' className='right hide-on-med-and-down'>
-               <li>
-                  <Link to='/'>Home</Link>
-               </li>
                <li>
                   <Link to='/about'>About</Link>
                </li>
