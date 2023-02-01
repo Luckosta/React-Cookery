@@ -3,13 +3,14 @@ import { getAllCategories } from '../../api';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import Preloader from '../../components/Preloader/Preloader';
 import Search from '../../components/Search/Search';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 function Home() {
    const [catalog, setCatalog] = useState([]);
    const [filteredCatalog, setFilteredCatalog] = useState([]);
    const [value, setValue] = useState('');
 
+   const { search } = useLocation();
    const [searchParams, setSearchParams] = useSearchParams();
    const searchValue = searchParams.get('category') || '';
 
@@ -25,18 +26,18 @@ function Home() {
       getAllCategories().then((data) => {
          setCatalog(data.categories);
          setFilteredCatalog(
-            data.categories.filter((item) =>
-               item.strCategory
-                  .toLowerCase()
-                  .includes(searchValue.toLowerCase())
-            )
+            search
+               ? data.categories.filter((item) =>
+                    item.strCategory
+                       .toLowerCase()
+                       .includes(searchValue.toLowerCase())
+                 )
+               : data.categories
          );
       });
-   }, []);
-
-   useEffect(() => {
-      setSearchParams({ category: searchValue });
-   }, []);
+      setSearchParams({category: value});
+     
+   }, [value]);
 
    return (
       <>
