@@ -11,8 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
    return (
-
-
+      <>
          <Routes>
             <Route path='/' element={<Layout />}>
                <Route index element={<Home />} />
@@ -20,10 +19,9 @@ function App() {
                <Route path='contact' element={<Contact />} />
                <Route path='*' element={<NotFound />} />
             </Route>
-            
          </Routes>
+      </>
    );
 }
-
 
 export default App;
