@@ -6,7 +6,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename='/React-Cookery'>
          <App />
       </BrowserRouter>
    </React.StrictMode>

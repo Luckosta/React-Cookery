@@ -1,4 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
+
+import GetMealInfo from './components/GetMealInfo/GetMealInfo';
+
 import Layout from './Layout/Layout';
 
 import About from './pages/About/About';
@@ -8,7 +11,8 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
    return (
-      <>
+
+
          <Routes>
             <Route path='/' element={<Layout />}>
                <Route index element={<Home />} />
@@ -16,8 +20,10 @@ function App() {
                <Route path='contact' element={<Contact />} />
                <Route path='*' element={<NotFound />} />
             </Route>
+            
          </Routes>
-      </>
-)}
+   );
+}
+
 
 export default App;

@@ -35,8 +35,7 @@ function Home() {
                : data.categories
          );
       });
-      setSearchParams({category: value});
-     
+      setSearchParams({ category: value });
    }, [value]);
 
    return (
