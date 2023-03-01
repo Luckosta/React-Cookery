@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import GetMealInfo from './components/GetMealInfo/GetMealInfo';
 import Layout from './Layout/Layout';
 
@@ -10,7 +10,6 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
    return (
-      <BrowserRouter basename='/React-Cookery'>
          <Routes>
             <Route path='/' element={<Layout />}>
                <Route index element={<Home />} />
@@ -20,9 +19,8 @@ function App() {
                <Route path='meal/:id' element={<GetMealInfo />} />
                <Route path='*' element={<NotFound />} />
             </Route>
-            f
+            
          </Routes>
-      </BrowserRouter>
    );
 }
 
